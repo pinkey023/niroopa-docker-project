@@ -14,11 +14,13 @@ services:
       replicas: 3
   recharge:
     image: niroopa12/paytm3-recharge:latest
+    ports:
+      - "92:80"
     deploy:
       replicas: 3
   dth:
     image: niroopa12/paytm4-dth:latest
     ports:
-      - "92:80"
+      - "93:80"
     deploy:
       replicas: 3

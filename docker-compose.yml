@@ -1,26 +1,35 @@
 version: '3'
 services:
   movies:
-    image: niroopa12/paytm1-service-movies:latest
+    image: niroopa12/paytm1-srvice-movies:latest
     ports:
       - "90:80"
+    volumes:
+      - "movie-vol"
     deploy:
       replicas: 3
   train:
     image: niroopa12/paytm2-service-train:latest
     ports:
       - "91:80"
+    volumes:
+      - "train-vol"
     deploy:
       replicas: 3
   recharge:
     image: niroopa12/paytm3-service-recharge:latest
     ports:
       - "92:80"
+    volumes:
+      - "rech-vol"
+
     deploy:
       replicas: 3
   dth:
     image: niroopa12/paytm4-service-dth:latest
     ports:
       - "93:80"
+    volumes:
+      - "dth-vol"
     deploy:
       replicas: 3

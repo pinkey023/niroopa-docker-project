@@ -3,24 +3,24 @@ services:
   movies:
     image: niroopa12/paytm1-movies:latest
     ports:
-      - "90:80"
+      - "94:80"
     deploy:
       replicas: 3
   train:
     image: niroopa12/paytm2-train:latest
     ports:
-      - "91:80"
+      - "95:80"
     deploy:
       replicas: 3
   recharge:
     image: niroopa12/paytm3-recharge:latest
     ports:
-      - "92:80"
+      - "96:80"
     deploy:
       replicas: 3
   dth:
     image: niroopa12/paytm4-dth:latest
     ports:
-      - "93:80"
+      - "97:80"
     deploy:
       replicas: 3
